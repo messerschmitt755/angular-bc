@@ -1,0 +1,32 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{selectedJedi.name}}</mat-card-title>
+    <mat-card-subtitle>{{selectedJedi.specialPower}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="img-jedi" src="assets/images/{{selectedJedi.imagePath}}" alt="Photo of a Jedi">
+    <mat-list>
+  <h4 mat-subheader>Power</h4>
+    <h5 mat-line>{{selectedJedi.power}}</h5>
+  <mat-divider></mat-divider>
+</mat-list>
+    <mat-list>
+  <h4 mat-subheader>Race</h4>
+    <h5 mat-line>{{selectedJedi.race}}</h5>
+  <mat-divider></mat-divider>
+</mat-list>
+<mat-list>
+  <h4 mat-subheader>Lightsaber</h4>
+    <h5 mat-line>{{selectedJedi.lightsaberColor}}</h5>
+  <mat-divider></mat-divider>
+</mat-list>
+<mat-list>
+  <h4 mat-subheader>Resistance</h4>
+    <h5 mat-line>{{selectedJedi.resistance}}</h5>
+  <mat-divider></mat-divider>
+</mat-list>
+  <!--<mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>-->
+</mat-card>

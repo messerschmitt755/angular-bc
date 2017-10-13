@@ -1,0 +1,41 @@
+<h2>My Jedis</h2>
+<div style="margin-left:auto;
+    margin-right:auto;
+    width:1180px;">
+<cdk-table [dataSource]="dataSource" class="example-container" style="display:block;float:left">
+    <ng-container cdkColumnDef="name">
+  <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Name </cdk-header-cell>
+  <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.name}} </cdk-cell>
+  </ng-container>
+  <ng-container cdkColumnDef="lightsaberColor">
+      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Lightsaber color </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.lightsaberColor}} </cdk-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="power">
+      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Power </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.power}} </cdk-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="race">
+      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Race </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.race}} </cdk-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="specialPower">
+      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Special ability </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.specialPower}} </cdk-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="resistance">
+      <cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Resistance </cdk-header-cell>
+      <cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.resistance}} </cdk-cell>
+    </ng-container>
+    <cdk-header-row *cdkHeaderRowDef="displayedColumns" class="example-header-row"></cdk-header-row>
+    <cdk-row (click)="onSelect(row)" *cdkRowDef="let row; columns: displayedColumns;" class="example-row"></cdk-row>
+</cdk-table>
+
+<div style="float:left;margin-top:70px;width:10%;position:relative">
+  <div style="float:left;width:100%;height:100%">
+  <div *ngFor="let jedi of jedis" style="margin-bottom:25px;cursor:pointer;">
+    <mat-icon (click)="onDelete(jedi)">delete</mat-icon><mat-icon (click)="onUpdate(jedi)">description</mat-icon>
+  </div>
+  </div>
+</div>
+</div>

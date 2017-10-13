@@ -1,0 +1,25 @@
+.example-card {
+  width: 400px;
+  margin-left:50px;
+  margin-top:50px;
+  overflow:hidden;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.img-jedi {
+    height:500px;
+}
+
+mat-list {
+    display:block;
+    float:left;
+    margin-right:10px;
+    text-align: center;
+}
+
+mat-card > img {
+
+}
